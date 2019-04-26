@@ -373,6 +373,13 @@ if(cmd === `ehh`){
 
 
 
+if(cmd === `Ruby`){
+  return message.channel.send("Pick A Word Ruby")
+
+}
+
+
+
 
 
 });
