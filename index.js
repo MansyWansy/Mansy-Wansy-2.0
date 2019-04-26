@@ -145,36 +145,42 @@ if(cmd === `${prefix}cry`){
 
 
 if(cmd === `${prefix}sleep`){
-  let Sembed = new Discord.RichEmbed()
+  let sleepembed = new Discord.RichEmbed()
   .setDescription(`${message.author} is going to sleep say goodnight~`)
   .setImage("https://66.media.tumblr.com/868b393c9add9e9e91de1fc05d0b6483/tumblr_pc8fc3ARiq1xuvhj0o1_400.gif")
 
-  return message.channel.send(Sembed)
+  return message.channel.send(sleepembed)
 }
 
-
-let Hugged = message.mentions.users.first()
+let hugged2 = message.author;
+let hugged = message.mentions.users.first()
 if(cmd === `${prefix}hug`){
-  if(!{Hugged}) return message.channel.send("Something Went Wrong! Please Try Again")
-  let Hembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} gave ${Hugged} a hug!`)
+  if(!hugged) {
+      let hugembed2 = new Discord.RichEmbed()
+      .setDescription(`${hugged2.username} Hugs Them Self`)
+      .setImage(`https://media.giphy.com/media/ArLxZ4PebH2Ug/giphy.gif`)
+    return message.channel.send(hugembed2)
+  }
+  let hugembed = new Discord.RichEmbed()
+  .setDescription(`${hugged2.username} gave ${hugged.username} a hug!`)
   .setImage("https://media.giphy.com/media/LIqFOpO9Qh0uA/giphy.gif")
 
-  return message.channel.send(Hembed)
+  return message.channel.send(hugembed)
 }
 
 
-let Nommed = message.mentions.users.first()
+let nommed = message.mentions.users.first()
 if(cmd === `${prefix}nom`){
-  let Nembed = new Discord.RichEmbed()
+  let nomembed = new Discord.RichEmbed()
   .setDescription(`${message.author} is eating something but what is it?`)
   .setImage("https://66.media.tumblr.com/546bf013d8bcd04db1da5416e1723e08/tumblr_pc8fdmWPUK1xuvhj0o2_400.gif")
 
-  return message.channel.send(Nembed)
+  return message.channel.send(nomembed)
 }
 
 
 if(cmd === `${prefix}poke`){
+  if(!poke) return message.channel.send("Please mention someone");
   let pokeembed = new Discord.RichEmbed()
   .setDescription(`${message.author} seems to want your attention`)
   .setImage("https://media.tenor.com/images/c3b9e561131197a739664c6b1ebe5622/tenor.gif")
@@ -185,6 +191,7 @@ if(cmd === `${prefix}poke`){
 
 let licked = message.mentions.users.first()
 if(cmd === `${prefix}lick`){
+  if(!licked) return message.channel.send("you licked yourself");
   let lickembed = new Discord.RichEmbed()
   .setDescription(`${message.author} licked ${licked}`)
   .setImage("https://thumbs.gfycat.com/SomberUnderstatedAnophelesmosquito-size_restricted.gif")
@@ -195,6 +202,7 @@ if(cmd === `${prefix}lick`){
 
 let tucked = message.mentions.users.first()
 if(cmd === `${prefix}tuckin`){
+  if(!tucked) return message.channel.send("you tucked yourself in");
   let tuckembed = new Discord.RichEmbed()
   .setDescription(`${message.author} tucked in ${tucked}`)
   .setImage("http://i.imgur.com/p00iDAj.gif")
@@ -207,6 +215,8 @@ if(cmd === `${prefix}tuckin`){
 
 let cookied = message.mentions.users.first()
 if(cmd === `${prefix}cookie`){
+  if(!cookied) return message.channel.send("you gave yourself a cookie");
+
 return message.channel.send(`you gave ${cookied} a cookie!`)
 }
 
@@ -247,10 +257,21 @@ return message.channel.send(helpembed)
 
 
 
+let meminfoed = message.mentions.users.first()
 if(cmd === `${prefix}memberinfo`){
+  if(!meminfoed){
+    let user = message.author;
+    let membericon2 = user.displayAvatarURL;
+    let meminfoembed2 = new Discord.RichEmbed()
+    .setTitle("Your Information")
+    .setColor("CC00CC")
+    .setThumbnail(membericon2)
+    .setFooter("Made by Mansy Wansy#0047")
+    .addField("Created On", user.createdAt)
+    .addField("You Joined", message.member.joinedAt)
 
-  let meminfoed = message.mentions.users.first()
-  let user = message.author;
+    return message.channel.send(meminfoembed2);
+  }
   let membericon = meminfoed.displayAvatarURL;
   let meminfoembed = new Discord.RichEmbed()
   .setTitle("Your Information")
@@ -348,3 +369,4 @@ if(cmd === `ehh`){
 });
 
  bot.login(botconfig.token);
+
