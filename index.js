@@ -57,11 +57,10 @@ if(cmd === `${prefix}kiss`){
 }
 
 
-let user = message.author()
 if(cmd === `${prefix}blush`){
   let blushembed = new Discord.RichEmbed()
   return message.channel.send(blushembed)
-  .setDescription(`${user.username} Is Blushing`)
+  .setDescription(`${user2.username} Is Blushing`)
   .setImage(`https://cdn.awwni.me/rti0.gif`)
 }
 
