@@ -57,6 +57,11 @@ if(cmd === `${prefix}kiss`){
 }
 
 
+if(cmd === `${prefix}blush`){
+  let blushembed = new Discord.RichEmbed()
+  return message.channel.send(blushembed)
+}
+
 
 let spanked = message.mentions.users.first()
 if(cmd === `${prefix}spank`){
@@ -152,6 +157,7 @@ if(cmd === `${prefix}sleep`){
   return message.channel.send(sleepembed)
 }
 
+
 let hugged2 = message.author;
 let hugged = message.mentions.users.first()
 if(cmd === `${prefix}hug`){
@@ -180,7 +186,6 @@ if(cmd === `${prefix}nom`){
 
 
 if(cmd === `${prefix}poke`){
-  if(!poke) return message.channel.send("Please mention someone");
   let pokeembed = new Discord.RichEmbed()
   .setDescription(`${message.author} seems to want your attention`)
   .setImage("https://media.tenor.com/images/c3b9e561131197a739664c6b1ebe5622/tenor.gif")
@@ -235,6 +240,8 @@ if(!user) {
 }
 
 
+
+
                                     //help commands
 
 
@@ -249,7 +256,7 @@ if(cmd === `${prefix}help`){
  .setTimestamp()
  .setFooter(`Mansy Wansy 2.0`, bot.user.displayAvatarURL)
  .setTitle(`My Commands Are`)
- .setDescription(`hug \n cookie \n nom \n dance \n poke \n sleep \n tuckin \n cry \n pout \n cuddle \n handhold \n bite \n lick \n lbite \n slap \n spank \n peck \n kiss \n pet \n avatar \n botinfo \n membercount \m memberinfo \n serverinfo \n \n please be patient this bot is still verry much a work in progress \n i would appreciate any feed back or comments you have about my bot \n thank you have a nice day \n ~Mansy Wansy`)
+ .setDescription(`hug \n cookie \n nom \n dance \n poke \n sleep \n tuckin \n cry \n pout \n cuddle \n handhold \n bite \n lick \n lbite \n slap \n spank \n peck \n kiss \n blush \n pet \n avatar \n botinfo \n membercount \m memberinfo \n serverinfo \n \n please be patient this bot is still verry much a work in progress \n i would appreciate any feed back or comments you have about my bot \n thank you have a nice day \n ~Mansy Wansy`)
 
 
 return message.channel.send(helpembed)
@@ -295,6 +302,9 @@ if(cmd === `${prefix}botinfo`){
   .setFooter("Made by Mansy Wansy#0047")
   .addField("Bot Name", bot.user.username)
   .addField("Created On", bot.user.createdAt)
+  .addField(`Number Of Servers Currently Occupying`, `${bot.guilds.size}`)
+  .addField(`Number Of Members Currently Stalking`, `${bot.users.size}`)
+
 
   return message.channel.send(botembed);
 }
@@ -351,8 +361,7 @@ if(cmd === `${prefix}vore`){
 
 
 if(cmd === `Nyaa`){
-  return message.channel.send("Hey Thats Arryns Word")
-
+  return message.channel.send(`hey thats arryns word!`)
 }
 
 
@@ -369,4 +378,3 @@ if(cmd === `ehh`){
 });
 
  bot.login(botconfig.token);
-
