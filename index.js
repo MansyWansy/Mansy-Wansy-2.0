@@ -273,7 +273,17 @@ if(cmd === `${prefix}tackle`){
 }
 
 
+let fucked = message.mentions.users.first()
+if(cmd === `${prefix}fuck`){
+  if(!fucked) {
+    return message.channel.send(`For This Command To Work Please mentions Someone`)
+  }
+  let fuckembed = new Discord.RichEmbed()
+  .setDescription(`${message.author.username} Fucked ${fucked.username}`)
+  .setImage(`https://cdn.discordapp.com/attachments/563834490615496716/571706310786285568/th.gif`)
 
+  return message.channel.send(fuckembed)
+}
 
 
 
@@ -291,7 +301,7 @@ if(cmd === `${prefix}help`){
  .setTimestamp()
  .setFooter(`Mansy Wansy 2.0`, bot.user.displayAvatarURL)
  .setTitle(`My Commands Are`)
- .setDescription(`hug \n cookie \n tackle \n nom \n dance \n poke \n sleep \n tuckin \n cry \n pout \n cuddle \n handhold \n bite \n lick \n lbite \n slap \n spank \n peck \n kiss \n blush \n pet \n avatar \n botinfo \n membercount \m memberinfo \n serverinfo \n \n please be patient this bot is still verry much a work in progress \n i would appreciate any feed back or comments you have about my bot \n thank you have a nice day \n ~Mansy Wansy`)
+ .setDescription(`hug \n cookie \n tackle \n nom \n dance \n poke \n sleep \n tuckin \n cry \n pout \n cuddle \n handhold \n bite \n lick \n lbite \n slap \n fuck \n spank \n peck \n kiss \n blush \n pet \n avatar \n botinfo \n membercount \m memberinfo \n serverinfo \n \n please be patient this bot is still verry much a work in progress \n i would appreciate any feed back or comments you have about my bot \n thank you have a nice day \n ~Mansy Wansy`)
 
 
 return message.channel.send(helpembed)
