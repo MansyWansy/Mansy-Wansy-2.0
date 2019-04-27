@@ -30,7 +30,7 @@ bot.on("message", async message => {
 let petted = message.mentions.users.first()
 if(cmd === `${prefix}pet`){
   let petembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} pet ${petted}`)
+  .setDescription(`${message.author.username} pet ${petted.username}`)
   .setImage("https://media1.tenor.com/images/01827ac93db8966ee97e63308ba79965/tenor.gif?itemid=9394441")
 
   return message.channel.send(petembed)
@@ -40,7 +40,7 @@ if(cmd === `${prefix}pet`){
 let pecked = message.mentions.users.first()
 if(cmd === `${prefix}peck`){
   let peckembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} You pecked ${pecked} `)
+  .setDescription(`${message.author.username} You pecked ${pecked.username} `)
   .setImage("https://media1.tenor.com/images/ef4a0bcb6e42189dc12ee55e0d479c54/tenor.gif?itemid=12143127")
 
   return message.channel.send(peckembed)
@@ -50,7 +50,7 @@ if(cmd === `${prefix}peck`){
 let kissed = message.mentions.users.first()
 if(cmd === `${prefix}kiss`){
   let kissembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} You kissed ${kissed} `)
+  .setDescription(`${message.author.username} You kissed ${kissed.username} `)
   .setImage("https://media1.tenor.com/images/78095c007974aceb72b91aeb7ee54a71/tenor.gif?itemid=5095865")
 
   return message.channel.send(kissembed)
@@ -69,7 +69,7 @@ if(cmd === `${prefix}blush`){
 let spanked = message.mentions.users.first()
 if(cmd === `${prefix}spank`){
   let spankembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} You spanked ${spanked} `)
+  .setDescription(`${message.author.username} You spanked ${spanked.username} `)
   .setImage("https://uploads.disquscdn.com/images/53068471f883b11eac1e8eec6e74c42e629e0cbc44ebd784fce24e2a00432ca5.gif")
 
   return message.channel.send(spankembed)
@@ -79,7 +79,7 @@ if(cmd === `${prefix}spank`){
 let slapped = message.mentions.users.first()
 if(cmd === `${prefix}slap`){
   let slapembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} You slapped ${slapped} `)
+  .setDescription(`${message.author.username} You slapped ${slapped.username} `)
   .setImage("https://media1.tenor.com/images/b186eb008171023c0dd88373438f1808/tenor.gif?itemid=5057461")
 
   return message.channel.send(slapembed)
@@ -88,7 +88,7 @@ if(cmd === `${prefix}slap`){
 let bit = message.mentions.users.first()
 if(cmd === `${prefix}bite`){
   let biteembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} You bit ${bit} `)
+  .setDescription(`${message.author.username} You bit ${bit.username} `)
   .setImage("https://cdn.discordapp.com/attachments/560157251071901708/567865613209305090/fWSIugu.gif")
 
   return message.channel.send(biteembed)
@@ -98,7 +98,7 @@ if(cmd === `${prefix}bite`){
 let lewdbite = message.mentions.users.first()
 if(cmd === `${prefix}lbite`){
   let lbiteembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} bites ${lewdbite} lewdly`)
+  .setDescription(`${message.author.username} bites ${lewdbite.username} lewdly`)
   .setImage("https://img1.ak.crunchyroll.com/i/spire1/38f541ca5c7880b947ea0345e4603a0f1418360963_full.gif")
 
   return message.channel.send(lbiteembed)
@@ -108,7 +108,7 @@ if(cmd === `${prefix}lbite`){
 let Handheld = message.mentions.users.first()
 if(cmd === `${prefix}handhold`){
   let HHembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} holds hands with ${Handheld}`)
+  .setDescription(`${message.author.username} holds hands with ${Handheld.username}`)
   .setImage("https://66.media.tumblr.com/2089f3da5e98836d8333c2c961591b8d/tumblr_oukurrIWDD1re8kj6o1_400.gif")
 
   return message.channel.send(HHembed)
@@ -127,7 +127,7 @@ if(cmd === `${prefix}hello`){
 let cuddled = message.mentions.users.first()
 if(cmd === `${prefix}cuddle`){
   let cuddleembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} Cuddles ${cuddled}`)
+  .setDescription(`${message.author.username} Cuddles ${cuddled.username}`)
   .setImage("https://media1.tenor.com/images/6e6b4714e4078946d84b4602992cc363/tenor.gif?itemid=6154171")
 
 return message.channel.send(cuddleembed)
@@ -136,7 +136,7 @@ return message.channel.send(cuddleembed)
 
 if(cmd === `${prefix}pout`){
   let Pembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} is pouting`)
+  .setDescription(`${message.author.username} is pouting`)
   .setImage("https://2.bp.blogspot.com/-u41XvsPss4M/V0KNPCFx4EI/AAAAAAAAdhw/edGXAefNFVsaHCv1Wo2fVloGxuytKRSzwCKgB/s1600/Omake+Gif+Anime+-+Tanaka-kun+wa+Itsumo+Kedaruge+-+Episode+7-+Rino+Blushing+Pout.gif")
 
   return message.channel.send(Pembed)
@@ -145,7 +145,7 @@ if(cmd === `${prefix}pout`){
 
 if(cmd === `${prefix}cry`){
   let cembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} is crying, maybe you should comfort them`)
+  .setDescription(`${message.author.username} is crying, maybe you should comfort them`)
   .setImage("https://img.fireden.net/a/image/1446/59/1446592990152.gif")
 
   return message.channel.send(cembed)
@@ -154,7 +154,7 @@ if(cmd === `${prefix}cry`){
 
 if(cmd === `${prefix}sleep`){
   let sleepembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} is going to sleep say goodnight~`)
+  .setDescription(`${message.author.username} is going to sleep say goodnight~`)
   .setImage("https://66.media.tumblr.com/868b393c9add9e9e91de1fc05d0b6483/tumblr_pc8fc3ARiq1xuvhj0o1_400.gif")
 
   return message.channel.send(sleepembed)
@@ -181,7 +181,7 @@ if(cmd === `${prefix}hug`){
 let nommed = message.mentions.users.first()
 if(cmd === `${prefix}nom`){
   let nomembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} is eating something but what is it?`)
+  .setDescription(`${message.author.username} is eating something but what is it?`)
   .setImage("https://66.media.tumblr.com/546bf013d8bcd04db1da5416e1723e08/tumblr_pc8fdmWPUK1xuvhj0o2_400.gif")
 
   return message.channel.send(nomembed)
@@ -190,7 +190,7 @@ if(cmd === `${prefix}nom`){
 
 if(cmd === `${prefix}poke`){
   let pokeembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} seems to want your attention`)
+  .setDescription(`${message.author.username} seems to want your attention`)
   .setImage("https://media.tenor.com/images/c3b9e561131197a739664c6b1ebe5622/tenor.gif")
 
   return message.channel.send(pokeembed)
@@ -201,7 +201,7 @@ let licked = message.mentions.users.first()
 if(cmd === `${prefix}lick`){
   if(!licked) return message.channel.send("you licked yourself");
   let lickembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} licked ${licked}`)
+  .setDescription(`${message.author.username} licked ${licked.username}`)
   .setImage("https://thumbs.gfycat.com/SomberUnderstatedAnophelesmosquito-size_restricted.gif")
 
   return message.channel.send(lickembed)
@@ -212,7 +212,7 @@ let tucked = message.mentions.users.first()
 if(cmd === `${prefix}tuckin`){
   if(!tucked) return message.channel.send("you tucked yourself in");
   let tuckembed = new Discord.RichEmbed()
-  .setDescription(`${message.author} tucked in ${tucked}`)
+  .setDescription(`${message.author.username} tucked in ${tucked.username}`)
   .setImage("http://i.imgur.com/p00iDAj.gif")
 
   return message.channel.send(tuckembed)
@@ -223,13 +223,13 @@ let danced = message.mentions.users.first()
 if (cmd === `${prefix}dance`){
 if(!danced) {
     let danceembed = new Discord.RichEmbed()
-    .setDescription(`${message.author} Is Dancing, Look At Them Go!`)
+    .setDescription(`${message.author.username} Is Dancing, Look At Them Go!`)
     .setImage(`https://cdn.discordapp.com/attachments/550046114057814032/571022293300412436/dancee.gif`)
   return message.channel.send(danceembed)
 }
  let author = message.author;
  let danceembed = new Discord.RichEmbed()
- .setDescription(`${author.username} Is Dancing With ${danced}`)
+ .setDescription(`${author.username} Is Dancing With ${danced.username}`)
  .setImage(`https://i.pinimg.com/originals/1a/4e/7e/1a4e7e3d9fb7e1d5e8ccc2d3787bc39d.gif`)
   return message.channel.send(danceembed)
 }
@@ -241,7 +241,7 @@ let cookied = message.mentions.users.first()
 if(cmd === `${prefix}cookie`){
   if(!cookied) return message.channel.send("you gave yourself a cookie");
 
-return message.channel.send(`you gave ${cookied} a cookie!`)
+return message.channel.send(`you gave ${cookied.username} a cookie!`)
 }
 
 let user2 = message.author;
@@ -257,6 +257,22 @@ if(!user) {
  .setImage(user.displayAvatarURL)
   return message.channel.send(avatarembed)
 }
+
+let tackled = message.mentions.users.first()
+if(cmd === `${prefix}tackle`){
+  if(!user) {
+    return message.channel.send(`For This Command To Work Please mentions Someone`)
+  }
+    let author = message.author;
+    let tackleembed = new Discord.RichEmbed()
+    .setDescription(`${author.username} Tackled ${tackled.username}`)
+    .setImage(`https://cdn.discordapp.com/attachments/566873682413355029/571519425891794963/image0.gif`)
+
+    return message.channel.send(tackleembed)
+
+}
+
+
 
 
 
@@ -275,7 +291,7 @@ if(cmd === `${prefix}help`){
  .setTimestamp()
  .setFooter(`Mansy Wansy 2.0`, bot.user.displayAvatarURL)
  .setTitle(`My Commands Are`)
- .setDescription(`hug \n cookie \n nom \n dance \n poke \n sleep \n tuckin \n cry \n pout \n cuddle \n handhold \n bite \n lick \n lbite \n slap \n spank \n peck \n kiss \n blush \n pet \n avatar \n botinfo \n membercount \m memberinfo \n serverinfo \n \n please be patient this bot is still verry much a work in progress \n i would appreciate any feed back or comments you have about my bot \n thank you have a nice day \n ~Mansy Wansy`)
+ .setDescription(`hug \n cookie \n tackle \n nom \n dance \n poke \n sleep \n tuckin \n cry \n pout \n cuddle \n handhold \n bite \n lick \n lbite \n slap \n spank \n peck \n kiss \n blush \n pet \n avatar \n botinfo \n membercount \m memberinfo \n serverinfo \n \n please be patient this bot is still verry much a work in progress \n i would appreciate any feed back or comments you have about my bot \n thank you have a nice day \n ~Mansy Wansy`)
 
 
 return message.channel.send(helpembed)
