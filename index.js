@@ -59,9 +59,10 @@ if(cmd === `${prefix}kiss`){
 
 if(cmd === `${prefix}blush`){
   let blushembed = new Discord.RichEmbed()
-  return message.channel.send(blushembed)
-  .setDescription(`${user2.username} Is Blushing`)
+  .setDescription(`${message.author.username} Is Blushing`)
   .setImage(`https://cdn.awwni.me/rti0.gif`)
+
+  return message.channel.send(blushembed)
 }
 
 
@@ -218,6 +219,22 @@ if(cmd === `${prefix}tuckin`){
 }
 
 
+let danced = message.mentions.users.first()
+if (cmd === `${prefix}dance`){
+if(!danced) {
+    let danceembed = new Discord.RichEmbed()
+    .setDescription(`${message.author} Is Dancing, Look At Them Go!`)
+    .setImage(`https://cdn.discordapp.com/attachments/550046114057814032/571022293300412436/dancee.gif`)
+  return message.channel.send(danceembed)
+}
+ let author = message.author;
+ let danceembed = new Discord.RichEmbed()
+ .setDescription(`${author.username} Is Dancing With ${danced}`)
+ .setImage(`https://i.pinimg.com/originals/1a/4e/7e/1a4e7e3d9fb7e1d5e8ccc2d3787bc39d.gif`)
+  return message.channel.send(danceembed)
+}
+
+
 
 
 let cookied = message.mentions.users.first()
@@ -357,29 +374,6 @@ if(cmd === `${prefix}vore`){
 
   return message.channel.send(voredembed)
 }
-
-
-
-
-
-if(cmd === `Nyaa`){
-  return message.channel.send(`hey thats arryns word!`)
-}
-
-
-
-if(cmd === `ehh`){
-  return message.channel.send("Hey Thats Cams Word")
-
-}
-
-
-
-if(cmd === `Ruby`){
-  return message.channel.send("Pick A Word Ruby")
-
-}
-
 
 
 
