@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 
 module.exports.run = async(bot, message, args) => {
     let tackled = message.mentions.users.first()
-      if(!user) {
+      if(!tackled) {
         return message.channel.send("For this command to work please mention another user.")
       }
         let author = message.author;
