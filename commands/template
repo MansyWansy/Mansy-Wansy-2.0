@@ -1,0 +1,88 @@
+const Discord = require('discord.js')
+
+module.exports.run = async(bot, message, args) => {
+
+        
+    
+var subreddits = [
+
+
+``,
+``,
+``,
+``,
+``,
+``,
+``
+
+]
+var sub = subreddits[Math.round(Math.random() * (subreddits.length - 1))];
+
+
+
+        const embed = new Discord.RichEmbed()
+            .setColor("CC00CC")
+
+            .setImage(sub);
+        message.channel.send(embed)
+       };
+
+
+
+module.exports.help = {
+    name: "",
+    description: "",
+    usage: ""
+}   
+
+
+
+
+    
+var subreddits = [
+
+
+  ``,
+  ``,
+  ``,
+  ``,
+  ``,
+  ``,
+  
+  
+  ]
+
+  var subreddits2 = [
+
+
+    ``,
+    ``,
+    ``,
+    ``,
+    ``,
+    ``,
+    ``,
+    ``,
+    ``,
+ 
+
+  ]
+
+  var sub = subreddits[Math.round(Math.random() * (subreddits.length - 1))];
+  var sub2 = subreddits2[Math.round(Math.random() * (subreddits2.length - 1))];
+
+
+         let  = message.mentions.users.first()
+         if(!) {
+             let embed2 = new Discord.RichEmbed()        
+             .setImage(sub)
+
+             .setColor("CC00CC")
+           return message.channel.send(embed2)
+         }
+          const embed = new Discord.RichEmbed()
+              .setColor("CC00CC")
+
+              .setImage(sub2);
+          message.channel.send(embed)
+         };
