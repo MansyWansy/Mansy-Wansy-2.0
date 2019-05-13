@@ -21,7 +21,7 @@ module.exports.run = async(bot, message, args) => {
             }
             const embed = new Discord.RichEmbed()
                 .setColor("CC00CC")
-                .setDescription(`${author.username} Tackled ${tackled.username}`)
+                .setDescription(`${message.author.username} Tackled ${tackled.username}`)
                 .setImage(sub);
             message.channel.send(embed)
            };
